@@ -5,7 +5,6 @@ import { wordlist } from "@scure/bip39/wordlists/english";
 export async function generateWallet() {
   const mnemonic = bip39.generateMnemonic(wordlist);
   const wallet = ethers.Wallet.fromPhrase(mnemonic);
-  //co
   return {
     mnemonic,
     address: wallet.address,
